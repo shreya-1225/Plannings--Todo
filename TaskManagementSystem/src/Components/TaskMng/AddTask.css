@@ -1,0 +1,217 @@
+.add-task-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-task-container {
+  max-width: 420px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 30px;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  background-color: #03000d;
+}
+
+.add-task-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.add-task-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group,
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-fields {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.add-task-container input,
+.add-task-container textarea,
+.add-task-container select,
+.inline-category-input input {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.192);
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #14141a;
+  color: #fff;
+}
+
+.inline-category-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 30px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #000000;
+  margin-top: 30px;
+}
+
+.small-btn {
+  font-size: 0.9rem;
+  padding: 0.6rem 2rem;
+  background: linear-gradient(135deg, #63ffb9, #8d75bb);
+  color: #000000;
+  border-radius: 30px;
+}
+.small-btn.light {
+  font-size: 0.9rem;
+  padding: 0.6rem 2rem;
+  background: linear-gradient(135deg, #000000, #8d75bb);
+  color: #000000;
+  border-radius: 30px;
+}
+.cancel-btn {
+  background: #cccccc76;
+  border-radius: 30px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* === DARK MODE === */
+.add-task-container.dark {
+  background: rgba(255, 255, 255, 0.022);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.048);
+  color: #fff;
+}
+
+.add-task-container.dark input,
+.add-task-container.dark textarea,
+.add-task-container.dark select {
+  background-color: #14141a;
+  color: #fff;
+}
+
+.add-task-container.dark h2 {
+  color: linear-gradient(90deg, #9a05cc, #b500c6, #2c60eb);
+  /* background: linear-gradient(90deg, #9a05cc, #b500c6, #2c60eb);
+} */
+}
+/* === LIGHT MODE === */
+.add-task-container.light {
+  background: rgba(187, 163, 208, 0.57);
+  border: 1px solid #c7b8f5;
+  color: #14141a;
+}
+
+.add-task-container.light input,
+.add-task-container.light textarea,
+.add-task-container.light select {
+  background: rgba(254, 253, 255, 0.923);
+  border: 1px solid #c7b8f5;
+  color: #000000;
+}
+
+.add-task-container.light h2 {
+  color: #696ff6;
+}
+
+.add-task-container.light select option {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.add-task-container.dark select option {
+  background-color: #1e2b51;
+  color: #ffffff;
+}
+.add-task-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.back-button-wrapper {
+  width: 100%;
+  max-width: 420px; /* Same as container width */
+  /* margin-bottom: 1rem; */
+  align-self: flex-start;
+  padding-left: 1rem;
+}
+
+/* ✅ Gradient heading text */
+.heading {
+  background: linear-gradient(90deg, #9a05cc, #b500c6, #2c60eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+/* ✅ Add spacing between priority and category fields */
+.spaced-fields .field-group {
+  flex: 1;
+  min-width: 45%;
+  margin-bottom: 0.5rem;
+}
+
+/* ✅ Transparent border for back button */
+.backtodb {
+  background-color: rgba(24, 1, 55, 0.459);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* transparent effect */
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.backtodb:hover {
+  background-color: rgba(0, 0, 0, 0.286);
+  transform: translateY(-1px);
+}
+
+/* Style for category dropdown */
+.add-task-container select {
+  border-radius: 30px;
+  border: 1px solid #696ff6;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+/* Light mode adjustments */
+.add-task-container.light select {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #b4a5f5;
+}
+
+/* 🆕 Add Task button in light mode */
+.submit-btn.small-btn.light {
+  background: linear-gradient(135deg, #b00ee6, #70c4cd);
+  color: #000000;
+}

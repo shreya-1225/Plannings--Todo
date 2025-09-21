@@ -1,0 +1,352 @@
+.manage-task-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background: #f0f4f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Back Button === */
+.back-button-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.backtodb {
+  background-color: rgba(24, 1, 55, 0.459);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* transparent effect */
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.backtodb:hover {
+  background-color: rgba(0, 0, 0, 0.286);
+  transform: translateY(-1px);
+}
+
+.heading {
+  background: linear-gradient(90deg, #9a05cc, #b500c6, #2c60eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+/* === Kanban Board === */
+.kanban-board {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 300px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === Task Card === */
+.task-card {
+  background: #eee7f34a;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.task-card {
+  border: 2px solid #a200ff;
+  border-left: 6px solid #8754ec;
+}
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-header h4 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.status-badge {
+  background: #cfb3f1;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* === Task Info === */
+.task-info {
+  margin-top: 0.75rem;
+}
+
+.task-info p {
+  margin: 0.5rem 0;
+}
+
+.task-info small {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* === Task Actions === */
+.task-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.task-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* === Buttons === */
+.inprogress-btn {
+  background: #ffc10733;
+  color: #856404;
+}
+
+.inprogress-btn:hover {
+  background: #ffc107;
+  color: #fff;
+}
+
+.complete-btn {
+  background: #28a74533;
+  color: #218838;
+}
+
+.complete-btn:hover {
+  background: #28a745;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #007bff33;
+  color: #0056b3;
+}
+
+.edit-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #dc354533;
+  color: #c82333;
+}
+
+.delete-btn:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.save-btn {
+  background: #20c997;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background: #17a589;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
+/* === Edit Inputs === */
+.task-header input {
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.task-info textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+  }
+
+  .kanban-column {
+    min-width: 100%;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+
+  .back-button-wrapper {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.kanban-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.kanban-column {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kanban-column {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.status-badge {
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff; /* ✅ white text for contrast */
+}
+
+.badge-todo {
+  background: #007bff;
+}
+
+.badge-inprogress {
+  background: #ffc107;
+  color: #333;
+}
+
+.badge-completed {
+  background: #28a745;
+}
+
+/* === Light Mode === */
+.manage-task-wrapper.light {
+  background: #f0f4f8;
+  color: #000;
+}
+
+.manage-task-wrapper.light .kanban-column {
+  background: #ffffff;
+}
+
+.manage-task-wrapper.light .task-card {
+  background: #eee7f34a;
+  border-color: #a200ff;
+}
+
+/* === Dark Mode === */
+.manage-task-wrapper.dark {
+  background: rgba(255, 255, 255, 0.022);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.048);
+  color: #fff;
+}
+
+.manage-task-wrapper.dark .kanban-column {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+}
+
+.manage-task-wrapper.dark .task-card {
+  background-color: #14141a;
+}
+
+.manage-task-wrapper.dark .task-info small,
+.manage-task-wrapper.dark .task-info p,
+.manage-task-wrapper.dark input,
+.manage-task-wrapper.dark textarea {
+  color: #f0f0f0;
+}
+
+.manage-task-wrapper.dark .task-card:hover {
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1);
+}
+
+/* === Dark/Light Mode Heading & Paragraph Color === */
+.manage-task-wrapper.dark .kanban-column h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.manage-task-wrapper.light .kanban-column h3 {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.manage-task-wrapper.dark .kanban-column p {
+  color: #f0f0f0;
+  text-align: center;
+  font-style: italic;
+}
+
+.manage-task-wrapper.light .kanban-column p {
+  color: #444444;
+  text-align: center;
+  font-style: italic;
+}

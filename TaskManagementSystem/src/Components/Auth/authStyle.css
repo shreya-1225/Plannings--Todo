@@ -1,0 +1,161 @@
+/* === Outer wrapper to center auth box === */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 4rem;
+}
+
+/* === Auth container (login/signup box) === */
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  margin-top: 20px;
+  border-radius: 30px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Theme variations === */
+.auth-container.dark {
+  background: rgba(255, 255, 255, 0.022);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.048);
+  color: #fff;
+}
+
+.auth-container.light {
+  background: rgba(210, 201, 218, 0.57);
+  border: 1px solid #c7b8f53e;
+  color: #14141a;
+}
+
+/* === Typography === */
+.auth-container p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.auth-container.light p {
+  color: #000000;
+}
+
+/* === Typewriter text === */
+.typewriter-box {
+  display: inline-block;
+  min-width: 220px;
+  height: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+}
+
+/* === Gradient color on animated typewriter text === */
+.gradient-text {
+  background: linear-gradient(90deg, #9a05cc, #b500c6, #2c60eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* === Form styling === */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* === Inputs === */
+.auth-container input {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.192);
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #14141a;
+  color: #fff;
+}
+
+.auth-container.light input {
+  background-color: #fff;
+  color: #000;
+}
+
+/* === Password visibility toggle === */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+.toggle-password {
+  position: absolute;
+  top: 55%;
+  right: 22px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+/* === Submit button === */
+.auth-container button {
+  background: linear-gradient(
+    135deg,
+    #8f35ea56,
+    #7b3eeb54,
+    #5d4aea50,
+    #4455eb52,
+    #2c5feb4e
+  );
+  border: none;
+  color: rgb(0, 3, 15);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.auth-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* === Toggle link === */
+.auth-toggle {
+  cursor: pointer;
+  color: #8f35ea;
+}
+
+/* === Google login button === */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin-top: 25px;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  gap: 22px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.google-btn:hover {
+  background-color: #1a1a1a;
+}
